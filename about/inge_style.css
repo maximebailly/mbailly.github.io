@@ -135,7 +135,7 @@ body {
 }
 
 .mot h1 {
-  font-size: 1.9vmax;
+  font-size: calc(24px + 1.9vmax);
   margin-bottom: 0;
   letter-spacing: 0.2vmax;
   font-weight: 600;
@@ -168,12 +168,12 @@ h1:hover::before {
 
 
 .mot h2 {
-  font-size: 1.5vmax;
+  font-size: calc(20px + 1.2vmax);
   font-style: italic;
   margin-top: 0.3em;
 }
 .mot p {
-  font-size: 1vmax;
+  font-size: calc(20px + 2vmax);
   font-weight: 200;
   margin: 0.8vmax 0;
 }
