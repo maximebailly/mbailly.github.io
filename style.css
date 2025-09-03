@@ -60,83 +60,73 @@ body {
   }
 }
 
-
 .menus {
-  display: flex;
-  justify-content:center;
-  margin: 0 0;
-  width:100%;
-  height:120vh;
+  margin: 0;
+  width: 100%;
+  height: 120vh;
+  font-size: 0;
   a {
-    font-size: 2vmax;
-    color: #ffffff;
-    font-weight: bold;
-    font-family: 'Bahnschrift';
-    text-decoration: none;
-    letter-spacing: 10px;
-    text-align: left;
-    padding: 40px;
-    line-height: 2.2;
-    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    text-align: 0 1px 1px;
-    text-shadow: none;
-  }
-  .gauche {
-    display: block;
-    border: 0;
-    margin: 0;
-    width:100%;
-    height:60vh;
-    justify-content:center;
-    .profil_etu {
-      background-image: url("img/metro.jpg");
-      background-size:cover;
-      height: 100%;
-      width: 100%;
-      border: 0;
-      margin: 0;
-      display : flex;
-      align-items: center;
+      font-size: 2vw;
+      color: #ffffff;
+      font-weight: bold;
+      font-family: 'Bahnschrift';
+      text-decoration: none;
+      letter-spacing: 10px;
+      text-align: left;
+      line-height: 2.2;
+      text-shadow: none;
     }
-    .pro {
-      background-image: url("img/kaolin.jpg");
-      background-size:cover;
-      height: 100%;
-      width: 100%;
-      border: 0;
-      margin: 0;
-      display : flex;
-      align-items: center;
-      }
-  }
-  .droite {
-    display: block;
-    border: 0;
-    margin: 0;
-    width:100%;
-    height:60vh;
-    .skills {
-      background-image: url("img/drift.jpg");
-      background-size:cover;
-      height: 100%;
-      width: 100%;
-      border: 0;
-      margin: 0;
-      display : flex;
-      align-items: center;
-    }
-    .about_me {
-      background-image: url("img/vallee.jpg");
-      background-size:cover;
-      height: 100%;
-      width: 100%;
-      border: 0;
-      margin: 0;
-      display : flex;
-      align-items: center;
-      }
+  a:hover {
+    color: #fff;
+    transform: scale(2);
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   }
 }
+
+.menus > div {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-size: initial;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  width:70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .menus > div  {
+    width: 100%;
+  }
+}
+
+/* Specific background images */
+.profil_etu {
+  background-image: url("img/metro.jpg");
+}
+.pro {
+  background-image: url("img/kaolin.jpg");
+}
+.skills {
+  background-image: url("img/drift.jpg");
+}
+.about_me {
+  background-image: url("img/vallee.jpg");
+}
+
 
 h2 {
   font-size: 1.8vmax;
@@ -151,12 +141,6 @@ h2 {
   text-shadow: none;
   margin-block-start: 0em;
   margin-block-end: 0em;
-}
-
-h2:hover a {
-  transform: scale(0.99);
-  color: #fff;
-  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 h3 {
