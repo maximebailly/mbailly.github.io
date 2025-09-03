@@ -82,12 +82,6 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .mot  {
-    width: 80vw;
-    right:4%;
-  }
-}
 
 .bloc {
   width: 100vw;
@@ -186,4 +180,23 @@ h3 {
   font-family: 'Bahnschrift';
   letter-spacing: 0.2em;
   font-size: 0.8vmax;
+}
+
+@media screen and (max-width: 700px) {
+  .bloc .mot {
+    width: 80vw;
+    right: 4%;
+  }
+
+  .bloc .mot h1 {
+    font-size: 4vw;
+  }
+
+  .bloc .mot h2 {
+    font-size: 3vw;
+  }
+
+  .bloc .mot p {
+    font-size: 2vw;
+  }
 }
