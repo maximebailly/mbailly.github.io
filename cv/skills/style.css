@@ -1,0 +1,327 @@
+body {
+    /*background: url(DSC05473.jpg) no-repeat center fixed; 
+    background-size: cover;*/
+    background-color: #ffffff;
+    margin:0;
+    background-image: url(img/horlogerie3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-attachment: fixed;
+    }
+
+@font-face {
+  font-family: Glacial Indifference;
+  src: url(../fonts/GlacialIndifference-Regular.otf);
+}
+@font-face {
+  font-family: Glacial Indifference;
+  src: url(../fonts/GlacialIndifference-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Glacial Indifference;
+  src: url(../fonts/GlacialIndifference-Italic.otf);
+  font-style: italic;
+}
+
+.header {
+  position:sticky;
+  top:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:0 auto;
+  background-color: #fafafa;
+  z-index:4;
+
+  img{
+    width:4vw;
+    margin:18px;
+  }
+  .btn {
+  position: absolute;
+  left : 30px;
+  border : 0.1em solid;
+  border-radius: 0.3em;
+  display:flex;
+  align-items: center;
+  text-align: center;
+  margin:0.5em 0.5em;
+  padding:1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  height:0.8em;
+  background-color: #dadada00; /* transparent */
+    a {
+      font-size: 1.3vw;
+      font-family: 'Glacial Indifference';
+      text-decoration: none;
+      text-align: center;
+      color:#000000;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+    }
+  }
+  .contact {
+    color: #2a2a41;
+    font-family: 'Glacial Indifference';
+    text-align: left;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    line-height: 1;
+    position:absolute;
+    right:0px;
+    margin-right: 5%;
+    a {
+      font-size: 1vmax;
+      display:block;
+      font-weight: 200;
+      text-align: right;
+      text-decoration: none;
+      color:#000000;
+      font-family: "Glacial Indifference";
+    }
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(43, 43, 43);
+
+  font-family: 'Glacial Indifference';
+
+  h1 {
+    justify-self: flex-start;
+    font-size:1.5vmax;
+    margin-bottom: 0;
+    letter-spacing: 0.2vmax;
+    font-weight: 600;
+    position:relative;
+  }
+  h1::after,
+  h1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0); /* Initially set to 0 */
+    transform-origin: right; /* Animate from right to left */
+    transition: transform 0.3s ease-out; /* Smooth transition */
+  }
+
+  h1::before {
+    top: -5px;
+    transform-origin: left; /* Animate from left to right */
+  }
+
+  h1:hover::after,
+  h1:hover::before {
+    transform: scaleX(1); /* Scale to full width on hover */
+  }
+
+
+
+  h2 {
+    font-size:1.1vmax;
+    font-style: italic;
+    margin-top: 0;
+  }
+  p {
+    display:block;
+    font-size:0.9vmax;
+    font-weight: 200;
+    letter-spacing:normal;
+    margin:0.8vmax;
+    margin-left: 0;
+    font-style: normal;
+  }
+
+  .blocg {
+    align-self:flex-start;
+    padding: 2em;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    text-align: left;
+    width: 60vw;
+    background-color: #fdfdfd;
+    transform: skewX(-5deg);
+  }
+  .blocd {
+    align-self: flex-end;
+    padding: 2em;
+    right:0%;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-right:5vw;
+    text-align: left;
+    width: 70vw;
+    background-color: #fdfdfd;
+    transform: skewX(-5deg);
+  }
+}
+
+h3 {
+  font-size: 1vmax;
+  color: #2a2a41;
+  font-family: 'Bahnschrift';
+  text-align: left;
+  margin:0;
+  margin-bottom: 1em;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  line-height: 1;
+}
+
+@keyframes fill-100 {
+  0%   { width: 0; }
+  100% { width: 400px; }
+}
+@keyframes fill-80 {
+  0%   { width: 0; }
+  100% { width: 320px; }
+}
+@keyframes fill-70 {
+  0%   { width: 0; }
+  100% { width: 280px; }
+}
+@keyframes fill-60 {
+  0%   { width: 0; }
+  100% { width: 240px; }
+}
+@keyframes fill-50 {
+  0%   { width: 0; }
+  100% { width: 200px; }
+}
+@keyframes fill-40 {
+  0%   { width: 0; }
+  100% { width: 160px; }
+}
+@keyframes fill-20 {
+  0%   { width: 0; }
+  100% { width: 80px; }
+}
+@keyframes fill-10 {
+  0%   { width: 0; }
+  100% { width: 40px; }
+}
+
+@keyframes colors {
+  0% { background-color: #000000;}
+  20% { background-color: #cc9263;}
+  100% { background-color: #af9474;}
+} 
+
+/* Graphique langues */
+.graph_l {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  font-size: 1vmax;
+  color: #616161;
+  font-family: 'Bahnschrift';
+  margin: 0 auto;
+  width: 60%; /* ou 50%, selon l'apparence souhaitée */
+}
+
+.graph_l .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top:1em;
+}
+
+.graph_l .row p {
+  flex: 0 0 5em; /* Largeur fixe pour les labels */
+  margin: 0;
+  text-align: left;
+}
+
+.bar {
+  position: relative;
+  height: 30px;
+  margin: 0;
+  display : block;
+  top: 0px;
+  left: 100px;
+}
+
+.bar:hover {
+  transform:scaleX(1.05);
+  transform-origin:left center;
+  transition: transform 0.3s ease-in;
+}
+
+
+.bar.anglais {
+  animation: fill-100 4s forwards 1s, colors 4s forwards 1s;
+}
+.bar.allemand {
+  animation: fill-50 4s forwards 1s, colors 4s forwards 1s;
+}
+.bar.russe {
+  animation: fill-10 4s forwards 1s, colors 4s forwards 1s;
+}
+
+
+/* Graphique langages informatiques */
+.graph_p {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-end;
+  font-size: 1vmax;
+  color: #616161;
+  font-family: 'Bahnschrift';
+  margin: 0 auto;
+  width: 60%; /* ou 50%, selon l'apparence souhaitée */
+}
+
+.graph_p .row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top:1em;
+}
+
+.graph_p .row p {
+  flex: 0 0 5em; /* Largeur fixe pour les labels */
+  margin: 0;
+  text-align: left;
+}
+
+.bar.py {
+  animation: fill-70 4s forwards 1s, colors 4s forwards 1s;
+}
+.bar.cpp {
+  animation: fill-40 4s forwards 1s, colors 4s forwards 1s;
+}
+.bar.html {
+  animation: fill-60 4s forwards 1s, colors 4s forwards 1s;
+}
+
+.level {
+  margin-left: 1em;
+  margin-right: 0;
+  width:3em;
+  font-size: 1vmax;
+  color: #000;
+  font-family: 'Bahnschrift';
+  white-space: nowrap;
+}
+
+
+.footer {
+  margin:4%;
+  text-align: center;
+  font-family: 'Bahnschrift';
+  letter-spacing: 0.2em;
+  font-size: 0.8vmax;
+}
