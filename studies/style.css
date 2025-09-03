@@ -37,8 +37,8 @@ body {
   }
   .btn {
   position: absolute;
-  left : 30px;
-  border : 0.1em solid;
+  left : 4%;
+  border : calc(0.05em + 0.08vw) solid;
   border-radius: 0.3em;
   display:flex;
   align-items: center;
@@ -47,10 +47,11 @@ body {
   padding:1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  height:0.8em;
+  height:1.5vw;
   background-color: #dadada00; /* transparent */
+  width: auto;
     a {
-      font-size: 1.3vw;
+      font-size: calc(5px + 1.1vw);
       font-family: 'Glacial Indifference';
       text-decoration: none;
       text-align: center;
@@ -71,7 +72,7 @@ body {
     right:0px;
     margin-right: 5%;
     a {
-      font-size: 1vmax;
+      font-size: calc(5px + 0.8vw);
       display:block;
       font-weight: 200;
       text-align: right;
@@ -179,7 +180,7 @@ h3 {
   text-align: center;
   font-family: 'Bahnschrift';
   letter-spacing: 0.2em;
-  font-size: 0.8vmax;
+  font-size: calc(4px + 0.5vmax);
 }
 
 @media screen and (max-width: 700px) {
@@ -189,14 +190,14 @@ h3 {
   }
 
   .bloc .mot h1 {
-    font-size: 4vw;
+    font-size: calc(4px + 4vw);
   }
 
   .bloc .mot h2 {
-    font-size: 3vw;
+    font-size: calc(3px + 3vw);
   }
 
   .bloc .mot p {
-    font-size: 2vw;
+    font-size: calc(2px + 2vw);
   }
 }

@@ -49,7 +49,7 @@ body {
     right:0px;
     margin-right: 5%;
     a {
-      font-size: 1vmax;
+      font-size: calc(5px + 0.8vw);
       display:block;
       font-weight: 200;
       text-align: right;
@@ -75,10 +75,12 @@ body {
       text-align: left;
       line-height: 2.2;
       text-shadow: none;
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
   a:hover {
     color: #fff;
-    transform: scale(2);
+    transform: scale(1.03);
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   }
 }
@@ -94,8 +96,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  font-size: initial;
-  text-align: center;
 }
 .centered {
   position: absolute;
@@ -109,6 +109,9 @@ body {
 @media screen and (max-width: 700px) {
   .menus > div  {
     width: 100%;
+  }
+  .centered a {
+    font-size: calc(2px + 4vw);
   }
 }
 
@@ -159,5 +162,5 @@ h3 {
   text-align: center;
   font-family: 'Bahnschrift';
   letter-spacing: 0.2em;
-  font-size: 0.8vmax;
+  font-size: calc(4px + 0.5vmax);
 }
