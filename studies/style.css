@@ -183,7 +183,7 @@ h3 {
   font-size: calc(4px + 0.5vmax);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .bloc .mot {
     width: 80vw;
     right: 4%;

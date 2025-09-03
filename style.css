@@ -113,6 +113,9 @@ body {
   .centered a {
     font-size: calc(2px + 4vw);
   }
+  .header {
+    position: relative;
+  }
 }
 
 /* Specific background images */

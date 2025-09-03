@@ -26,6 +26,7 @@ body {
   font-style: italic;
 }
 
+
 .header {
   position:sticky;
   top:0;
@@ -42,8 +43,8 @@ body {
   }
   .btn {
   position: absolute;
-  left : 30px;
-  border : 0.1em solid;
+  left : 4%;
+  border : calc(0.05em + 0.08vw) solid;
   border-radius: 0.3em;
   display:flex;
   align-items: center;
@@ -52,10 +53,11 @@ body {
   padding:1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  height:0.8em;
+  height:1.5vw;
   background-color: #dadada00; /* transparent */
+  width: auto;
     a {
-      font-size: 1.3vw;
+      font-size: calc(5px + 1.1vw);
       font-family: 'Glacial Indifference';
       text-decoration: none;
       text-align: center;
@@ -76,7 +78,7 @@ body {
     right:0px;
     margin-right: 5%;
     a {
-      font-size: 1vmax;
+      font-size: calc(5px + 0.8vw);
       display:block;
       font-weight: 200;
       text-align: right;
@@ -136,7 +138,7 @@ body {
   }
   p {
     display:block;
-    font-size:0.9vmax;
+    font-size: calc(7px + 0.4vw);
     font-weight: 200;
     letter-spacing:normal;
     margin:0.8vmax;
@@ -183,35 +185,35 @@ h3 {
 
 @keyframes fill-100 {
   0%   { width: 0; }
-  100% { width: 400px; }
+  100% { width: 60%; }
 }
 @keyframes fill-80 {
   0%   { width: 0; }
-  100% { width: 320px; }
+  100% { width: 48%; }
 }
 @keyframes fill-70 {
   0%   { width: 0; }
-  100% { width: 280px; }
+  100% { width: 42%; }
 }
 @keyframes fill-60 {
   0%   { width: 0; }
-  100% { width: 240px; }
+  100% { width: 36%; }
 }
 @keyframes fill-50 {
   0%   { width: 0; }
-  100% { width: 200px; }
+  100% { width: 30%; }
 }
 @keyframes fill-40 {
   0%   { width: 0; }
-  100% { width: 160px; }
+  100% { width: 24%; }
 }
 @keyframes fill-20 {
   0%   { width: 0; }
-  100% { width: 80px; }
+  100% { width: 12%; }
 }
 @keyframes fill-10 {
   0%   { width: 0; }
-  100% { width: 40px; }
+  100% { width: 6%; }
 }
 
 @keyframes colors {
@@ -232,27 +234,15 @@ h3 {
   width: 60%; /* ou 50%, selon l'apparence souhaitée */
 }
 
-.graph_l .row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1em;
-  margin-top:1em;
-}
-
-.graph_l .row p {
-  flex: 0 0 5em; /* Largeur fixe pour les labels */
-  margin: 0;
-  text-align: left;
-}
-
 .bar {
   position: relative;
-  height: 30px;
+  height: 40px;
   margin: 0;
-  display : block;
-  top: 0px;
-  left: 100px;
+  width: 0;
+  background-color: #000;
 }
+
+
 
 .bar:hover {
   transform:scaleX(1.05);
@@ -281,21 +271,27 @@ h3 {
   color: #616161;
   font-family: 'Bahnschrift';
   margin: 0 auto;
-  width: 60%; /* ou 50%, selon l'apparence souhaitée */
+  width: 60%;
 }
 
+
+.graph_l .row,
 .graph_p .row {
   display: flex;
   align-items: center;
   margin-bottom: 1em;
   margin-top:1em;
+  width:100%;
+  gap: 1em; /* optional for spacing */
 }
 
+
+.graph_l .row p,
 .graph_p .row p {
   flex: 0 0 5em; /* Largeur fixe pour les labels */
   margin: 0;
   text-align: left;
-}
+  }
 
 .bar.py {
   animation: fill-70 4s forwards 1s, colors 4s forwards 1s;
@@ -310,11 +306,17 @@ h3 {
 .level {
   margin-left: 1em;
   margin-right: 0;
-  width:3em;
+  width:5em;
   font-size: 1vmax;
   color: #000;
   font-family: 'Bahnschrift';
   white-space: nowrap;
+}
+
+.graph_l,
+.graph_p {
+  width: 100%;
+  max-width: 600px;
 }
 
 
@@ -323,5 +325,29 @@ h3 {
   text-align: center;
   font-family: 'Bahnschrift';
   letter-spacing: 0.2em;
-  font-size: 0.8vmax;
+  font-size: calc(4px + 0.5vmax);
+}
+
+@media screen and (max-width: 700px) {
+  .blocd h1, .blocg h1 {
+    font-size: calc(10px + 1.5vw);
+  }
+
+  .blocd h2, .blocg h2 {
+    font-size: calc(8px + 1vw);
+  }
+
+  .blocd p, .blocg p {
+    font-size: calc(7px + 1vw);
+    line-height: 1.6;
+  }
+
+  .graph_l .row p,
+  .graph_p .row p {
+    font-size:calc(7px + 1vw);
+  }
+
+  .level {
+    font-size: calc(5px + 1vw);
+  }
 }
