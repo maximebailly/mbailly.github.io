@@ -30,7 +30,7 @@ body {
   align-items: center;
   margin:0 auto;
   background-color: #fafafa;
-  z-index:4;
+  z-index:6;
 
   img{
     width:4vw;
@@ -173,7 +173,7 @@ body {
     .mot {
       display: flex;
       align-items:center;
-      max-width: 800px;
+      max-width: 700px;
       margin: auto;
     }
     background: url(img/vtt.jpg)
@@ -183,6 +183,7 @@ body {
       display: grid;
       margin:auto;
       text-align: center;
+      font-size: calc(10px + 0.5vw);
       letter-spacing: 0.5em;
       height: calc(100vh - 10em);
       grid: repeat(2, 1fr) / 100%;
@@ -243,7 +244,7 @@ h1 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1vmax;
     color: #2a2a41;
     font-family: 'Bahnschrift';
     text-align: left;
@@ -263,10 +264,8 @@ h3 {
 }
 
 @media screen and (max-width: 700px) {
-  h1 {
-    font-size: calc(10px + 3vw);
-  }
-  .mot .vtt .hover h1 {
+  .vtt .mot .hover h1 {
     width:100%;
+    font-size: calc(2px + 3vw);
   }
 }

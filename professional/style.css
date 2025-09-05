@@ -111,7 +111,7 @@ body {
   letter-spacing: 0.2vmax;
   font-weight: 600;
   position:relative;
-  width: max-content;
+  width: auto;
 }
 
 h1::after,
@@ -119,9 +119,9 @@ h1::before {
   content: '';
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: calc(0.8px + 0.07vw);
   background: linear-gradient(to right, #df0000, #ffd000);
-  bottom: -5px;
+  bottom: -3px;
   left: 0;
   transform: scaleX(0); /* Initially set to 0 */
   transform-origin: right; /* Animate from right to left */
